@@ -1,0 +1,32 @@
+	%***********************************%
+	%									%
+	%		Tesi di Laurea Triennale	%
+	%		  	di Daniel De Gaspari	%
+	%									%
+	%				 7 Dicembre 2017	%
+	%									%
+	%***********************************%
+	
+\documentclass[ 10pt,
+				a4paper,										% Formato A4
+				] {book}
+
+%******************************************
+% Importazione packages
+%******************************************
+\usepackage[utf8]{inputenc}										% codifica di input
+\usepackage{graphicx}											% immagini
+\usepackage{chngpage, calc}										% centra il frontespizio
+\usepackage[binding=5mm]{layaureo}								% margini ottimizzati per l'A4; rilegatura di 5mm
+\usepackage{microtype}											% microtipografia
+\usepackage{mparhack, fixltx2e, relsize}						% finezze tipografiche
+
+\input{Template/tesi-config}									% file di configurazione contenente impostazioni personali
+
+%******************************************
+% Documento
+%******************************************
+
+\begin{document}
+	\input{sections/frontespizio}
+\end{document}
