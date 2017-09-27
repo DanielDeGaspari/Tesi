@@ -22,6 +22,9 @@
 \usepackage{mparhack, fixltx2e, relsize}						% finezze tipografiche
 \usepackage{hyperref}											% collegamenti ipertestuali
 
+\usepackage[toc, acronym]{glossaries}							% glossario
+																% istruzioni:
+
 \input{Template/tesi-config}									% file di configurazione contenente impostazioni personali
 
 %******************************************
@@ -29,8 +32,25 @@
 %******************************************
 
 \begin{document}
+	%******************************************
+	% Parte iniziale
+	%******************************************
+	\frontmatter
 	\input{sections/frontespizio}
 	\input{sections/colophon}
 	\input{sections/dedica}
 	\input{sections/sommario}
+	
+	\cleardoublepage
+	%******************************************
+	% Parte centrale
+	%******************************************
+	\mainmatter
+
+	%******************************************
+	% Parte finale
+	%******************************************
+	\backmatter
+	\printglossaries
+	
 \end{document}
