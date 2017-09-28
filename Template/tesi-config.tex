@@ -51,3 +51,42 @@
 %%% ****************************************** %%%
 \input{glossario} 										% DataBase dei termini
 \makeglossaries
+\newcommand{\glsfirstoccur}{\appendix{{[g]}}}
+
+
+%%% ****************************************** %%%
+%	Impostazioni di hyperref					 %
+%%% ****************************************** %%%
+\hypersetup{
+	colorlinks = true,
+	linktocpage = true,
+	pdfstartpage = 1,
+	pdfstartview = FitV,
+	breaklinks = true,
+	pdfpagemode = UseNone,
+	pageanchor = true,
+	pdfpagemode = UseOutlines,
+	plainpages = false,
+	bookmarksnumbered,
+	bookmarksopen = true,
+	bookmarksopenlevel = 1,
+	hypertexnames = true,
+	pdfhighlight = /0,
+	urlcolor = webbrown,
+	linkcolor = blue,
+	citecolor = webgreen,
+	pdftitle={\titoloTesi}
+	pdfauthor={\textcopyright\ \autore, \universita, \cdl},
+	pdfsubject={},
+	pdfkeywords={},
+	pdfcreator={pdfLaTeX},
+	pdfproducer={LaTeX}
+}
+
+
+%%% ****************************************** %%%
+%	Impostazioni di xcolor						 %
+%%% ****************************************** %%%
+\definecolor{webgreen}{rgb}{0,.5,0}
+\definecolor{webbrown}{rgb}{.6,0,0}
+\definecolor{blue}{cmyk}{0.71,0.53,0.00,0.12}

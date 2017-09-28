@@ -8,7 +8,9 @@
 	%***********************************%
 	
 \documentclass[ 10pt,
-				a4paper,										% Formato A4
+				a4paper,										% formato A4
+				twoside,										% impagina per fronte-retro
+				openright,										% inizio capitoli a destra
 				] {book}
 
 %******************************************
@@ -21,9 +23,16 @@
 \usepackage{microtype}											% microtipografia
 \usepackage{mparhack, fixltx2e, relsize}						% finezze tipografiche
 \usepackage{hyperref}											% collegamenti ipertestuali
+\usepackage{bookmark}											% segnalibri
+\usepackage{caption}											% didascalie
+\usepackage{csquotes}											% gestisce automaticamente i caratteri (")
+\usepackage{emptypage}											% pagine vuote senza intestazione e pie di pagina
+\usepackage{nameref}											% visualizza i nomi dei riferimenti
+\usepackage[font=small]{quoting}								% citazioni
+\usepackage[italian]{varioref}									% riferimenti completi alla pagina
+\usepackage[dvpsnames]{xcolor}									% colori
 
 \usepackage[toc, acronym]{glossaries}							% glossario
-																% istruzioni:
 
 \input{Template/tesi-config}									% file di configurazione contenente impostazioni personali
 
