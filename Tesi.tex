@@ -7,16 +7,23 @@
 	%									%
 	%***********************************%
 	
+% !TEX encoding = UTF-8
+% !TEX TS-program = pdflatex
+% !TEX spellcheck = it-IT
+	
 \documentclass[ 10pt,
 				a4paper,										% formato A4
 				twoside,										% impagina per fronte-retro
 				openright,										% inizio capitoli a destra
+				english,
+				italian,
 				] {book}
 
 %******************************************
 % Importazione packages
 %******************************************
 \usepackage[utf8]{inputenc}										% codifica di input
+\usepackage[english, italian]{babel}							% lingua inglese e italiana
 \usepackage{graphicx}											% immagini
 \usepackage{chngpage, calc}										% centra il frontespizio
 \usepackage[binding=5mm]{layaureo}								% margini ottimizzati per l'A4; rilegatura di 5mm
@@ -57,6 +64,7 @@
 	% Parte centrale
 	%******************************************
 	\mainmatter
+	\input{sections/capitoli/capitolo-1}		% Introduzione
 
 	%******************************************
 	% Parte finale
