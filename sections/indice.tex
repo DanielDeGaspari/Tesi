@@ -1,0 +1,29 @@
+% !TEX root = ../Tesi.tex
+
+%******************************************
+% Indice
+%******************************************
+\cleardoublepage
+\pdfbookmark{\contentsname}{tableofcontents}
+\setcounter{tocdepth}{2}
+\tableofcontents
+\clearpage
+
+\begingroup
+
+	\let\clearpage\relax
+	\let\cleardoublepage\relax
+	\let\cleardoublepage\relax
+	
+	%******************************************
+	% Elenco delle figure
+	%******************************************
+	\phantomsection
+	\pdfbookmark{\listtablename}{lot}
+	\listoftables
+	
+	\vspace*{8ex}
+
+\endgroup
+
+\cleardoublepage
