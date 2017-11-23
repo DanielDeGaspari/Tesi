@@ -4,7 +4,31 @@
 \renewcommand{\acronymname}{Acronimi e abbreviazioni}
 
 \newacronym[description={\glslink{CMSg}{Content Management System}}]
-			{cms}{CMS}{Content Management System}
+{cms}{CMS}{Content Management System}
+
+\newacronym[description={\glslink{DAMPg}{Drush Apache MySQL PHP}}]
+{damp}{DAMP}{Drush Apache MySQL PHP}
+
+\newacronym[description={\glslink{HTMLg}{HyperText Markup Language}}]
+{html}{HTML}{HyperText Markup Language}
+
+\newacronym[description={\glslink{W3CGg}{World Wide Web Consortium}}]
+{w3cg}{W3CG}{World Wide Web Consortium}
+
+\newacronym[description={\glslink{APIg}{Application Programming Interface}}]
+{api}{API}{Application Programming Interface}
+
+\newacronym[description={\glslink{JSONg}{JavaScript Object Notation}}]
+{json}{JSON}{JavaScript Object Notation}
+
+\newacronym[description={\glslink{HTTPg}{HyperText Transfer Protocol}}]
+{http}{HTTP}{HyperText Transfer Protocol}
+
+\newacronym[description={\glslink{TF-IDFg}{term frequency–inverse document frequency}}]
+{tf-idf}{TF-IDF}{term frequency–inverse document frequency}
+
+\newacronym[description={\glslink{XMLg}{eXtensible Markup Language}}]
+{xml}{XML}{eXtensible Markup Language}
 
 %******************************************
 % Glossario
@@ -14,7 +38,7 @@
 	name=\glslink{open source}{Open source},
 	text=open source,
 	sort=open source,
-	description={Software di cui i detentori dei diritti rendono pubblico il codice sorgente, permettendo ad altri 		programmatori di apportarvi modifiche. Questo meccanismo è regolato tramite l’applicazione di apposite licenze d’uso}
+	description={Software di cui i detentori dei diritti rendono pubblico il codice sorgente, permettendo ad altri programmatori di apportarvi modifiche. Questo meccanismo è regolato tramite l’applicazione di apposite licenze d’uso}
 }
 
 \newglossaryentry{Solr}
@@ -22,7 +46,7 @@
 	name=\glslink{Solr}{Solr},
 	text=Sorl,
 	sort=solr,
-	description={testo test}
+	description={Piattaforma di ricerca \gls{open source}. E' scritto in \gls{Java} e viene eseguito come server di ricerca full text indipendente all'interno di un contenitore \gls{Servlet}. Solr usa la libreria di ricerca \gls{Java Lucene} per la ricerca e l'indicizzazione full text e mette a disposizione chiamate \gls{REST} come ad esempio \gls{HTTPg}/ \gls{JSONg} e \gls{XMLg} \gls{APIg} che rendono semplice la comunicazione}
 }
 
 \newglossaryentry{ElasticSearch}
@@ -30,7 +54,7 @@
 	name=\glslink{ElasticSearch}{ElasticSearch},
 	text=ElasticSearch,
 	sort=elasticsearch,
-	description={testo test}
+	description={Piattaforma di ricerca \gls{open source}, con capacità full text. E' un server di ricerca basato su \gls{Java Lucene} e supporta architetture distribuite. Tutte le funzionalità sono nativamente esposte tramite interfaccia \gls{RESTful}; le informazioni sono invece gestite come documenti \gls{JSONg}}
 }
 
 \newglossaryentry{Drupal}
@@ -38,7 +62,8 @@
 	name=\glslink{Drupal}{Drupal},
 	text=Drupal,
 	sort=drupal,
-	description={Drupal è un \gls{CMSg}, rilasciato sotto licenza \gls{open source}, che permette la creazione di siti Internet, blog e portali, gallerie di immagini, forum di discussione, piattaforme intranet e molto altro. Essa è altresì un’applicazione completamente web based e può quindi essere utilizzata attraverso un semplice browser}
+	description={Drupal è un \gls{CMSg}, rilasciato sotto licenza \gls{open source}, che permette la creazione di siti Internet, blog e portali, gallerie di immagini, forum di discussione, piattaforme intranet e molto altro. Essa è altresì un’applicazione completamente web based e può quindi essere utilizzata attraverso un semplice browser. \\
+		E' interamente sviluppato in \gls{PHP} e utilizza come base di dati \gls{MySQL} in modo nativo}
 }
 
 \newglossaryentry{CMSg}
@@ -47,4 +72,460 @@
 	text=Content Management System,
 	sort=content management system,
 	description={E’ un software per la realizzazione e la gestione di siti dinamici, che possono accrescere e mutare il proprio contenuto continuamente. Un \gls{CMSg} consente al committente del sito di occuparsi direttamente della sua gestione senza intermediari esterni}
+}
+
+\newglossaryentry{Acquia Dev Desktop 2}
+{
+	name=\glslink{Acquia Dev Desktop 2}{Acquia Dev Desktop 2},
+	text=Acquia Dev Desktop 2,
+	sort=acquia dev desktop 2,
+	description={E’ un software per la realizzazione e la gestione di siti dinamici, che possono accrescere e mutare il proprio contenuto continuamente. Un \gls{CMSg} consente al committente del sito di occuparsi direttamente della sua gestione senza intermediari esterni}
+}
+
+\newglossaryentry{Acquia Cloud}
+{
+	name=\glslink{Acquia Cloud}{Acquia Cloud},
+	text=Acquia Cloud,
+	sort=acquia cloud,
+	description={Servizio di hosting su piattaforma Acquia}
+}
+
+\newglossaryentry{disaster recovery test}
+{
+	name=\glslink{disaster recovery test}{Disaster recovery test},
+	text=disaster recovery test,
+	sort=disaster recovery test,
+	description={Test dedicati alla verifica del funzionamento dell'insieme delle misure tecnologiche e logistico/organizzative atte a ripristinare sistemi, dati e infrastrutture necessarie all'erogazione di servizi di business per imprese, associazioni o enti, a fronte di gravi emergenze che ne intacchino la regolare attività}
+}
+
+\newglossaryentry{SQLylog}
+{
+	name=\glslink{SQLylog}{SQLylog},
+	text=SQLylog,
+	sort=SQLylog,
+	description={Strumento che consente di gestire graficamente il database MySQL}
+}
+
+\newglossaryentry{Devel}
+{
+	name=\glslink{Devel}{Devel},
+	text=Devel,
+	sort=devel,
+	description={Modulo di \gls{Drupal} che aiuta il programmatore o il web designer generando nodi e popolandone i campi, aggiungendo termini o creando utenti di prova. Una semplice procedura batch può inserire nel sito una grande quantità di dati di esempio, così da poter analizzare il funzionamento dei moduli, le performance del sistema o testare il layout}
+}
+
+\newglossaryentry{Search Log}
+{
+	name=\glslink{Search Log}{Search Log},
+	text=Search Log,
+	sort=search log,
+	description={\url{https://www.drupal.org/project/search_log} \\
+		Modulo di Drupal che registra i termini ricercati, fornendo report più dettagliati rispetto a quelli forniti di base dal core}
+}
+
+\newglossaryentry{DAMPg}
+{
+	name=\glslink{damp}{DAMP},
+	text=DAMP,
+	sort=damp,
+	description={Acronimo che indica una piattaforma software per lo sviluppo di applicazioni web che prende il nome dalle iniziali dei componenti software con cui è realizzata. Le tecnologie contenute sono: \gls{Drush}, \gls{Apache}, \gls{MySQL}, \gls{PHP}}
+}
+
+\newglossaryentry{Drush}
+{
+	name=\glslink{Drush}{Drush},
+	text=Drush,
+	sort=drush,
+	description={Shell a riga di comando e interfaccia di scripting per \gls{Drupal}}
+}
+
+\newglossaryentry{Apache}
+{
+	name=\glslink{Apache}{Apache},
+	text=Apache,
+	sort=apache,
+	description={Piattaforma server Web modulare largamente diffusa, in grado di operare su una grande varietà di sistemi operativi, tra cui UNIX/Linux, Microsoft Windows}
+}
+
+\newglossaryentry{MySQL}
+{
+	name=\glslink{MySQL}{MySQL},
+	text=MySQL,
+	sort=php,
+	description={Database relazionale largamente diffuso, composto da un client a riga di comando e un server}
+}
+
+\newglossaryentry{PHP}
+{
+	name=\glslink{PHP}{PHP},
+	text=PHP,
+	sort=php,
+	description={Linguaggio di scripting interpretato}
+}
+
+\newglossaryentry{Git Extensions}
+{
+	name=\glslink{Git Extensions}{Git Extensions},
+	text=Git Extensions,
+	sort=git extensions,
+	description={Interfaccia grafica per \gls{Git} che consente l'utilizzo di \gls{Git} senza dover ricorrere alla riga di comando}
+}
+
+\newglossaryentry{Git}
+{
+	name=\glslink{Git}{Git},
+	text=Git,
+	sort=git,
+	description={Sistema di controllo di versione distribuito e open source}
+}
+
+\newglossaryentry{Modulo}
+{
+	name=\glslink{Modulo}{Modulo},
+	plural=moduli,
+	text=modulo,
+	sort=modulo,
+	description={Collezione di funzioni che forniscono funzionalità aggiuntive alle istanze \gls{Drupal} }
+}
+
+\newglossaryentry{Tassonomia}
+{
+	name=\glslink{Tassonomia}{Tassonomia},
+	plural=tassonomie,
+	text=tassonomia,
+	sort=tassonomia,
+	description={Nel suo significato più generale, rappresenta la disciplina della classificazione. Nell'ambito \gls{Drupal}, rappresenta uno strumento (derivante da un apposito \gls{Modulo}) che consente di organizzare e catalogare i contenuti del sito}
+}
+
+\newglossaryentry{Tag}
+{
+	name=\glslink{Tag}{Tag},
+	text=tag,
+	sort=tag,
+	description={Parola chiave il cui intento è indicare senza troppi dettagli il contenuto della pagina a cui si riferiscono}
+}
+
+\newglossaryentry{File Entity}
+{
+	name=\glslink{File Entity}{File Entity},
+	text=File Entity,
+	sort=file entity,
+	description={Fornisce interfacce per la gestione dei files e maggiori funzionalità dedicate ad essi}	
+}
+
+\newglossaryentry{Dipendenza}
+{
+	name=\glslink{Dipendenza}{Dipendenza},
+	plural=dipendenze,
+	text=dipendenza,
+	sort=dipendenza,
+	description={Si dice che un \gls{Modulo} dipende da altri moduli quando questo, per poter essere attivato, necessita di uno o più altri moduli (che dovranno dunque essere anch'essi attivi)}
+}
+
+\newglossaryentry{Search API}
+{
+	name=\glslink{Search API}{Search API},
+	text=Search API,
+	sort=search api,
+	description={\gls{Framework} che consente di eseguire ricerche su qualunque tipo di entità conosciuta a \gls{Drupal}, dando la possibilità di utilizzare qualunque tipo di motore di ricerca. E' un modulo di \gls{Drupal}}
+}
+
+\newglossaryentry{Framework}
+{
+	name=\glslink{Framework}{Framework},
+	text=Framework,
+	sort=framework,
+	description={Insieme di classi cooperanti che forniscono lo scheletro di un’applicazione riusabile per uno specifico dominio applicativo. Delinea l’architettura delle applicazioni in cui viene usato}
+}
+
+\newglossaryentry{Entity API}
+{
+	name=\glslink{Entity API}{Entity API},
+	text=Entity API,
+	sort=entity api,
+	description={\gls{Modulo} \gls{Drupal} che consente di estendere funzionalità del core di \gls{Drupal}, fornendo un modo unificato di interagire con le entità e le loro proprietà. Fornisce inoltre un controller per effettuare operazioni CRUD (Create, Read, Update, Delete) sulle entità}
+}
+
+\newglossaryentry{Search API Database}
+{
+	name=\glslink{Search API Database}{Search API Database},
+	text=Search API Database,
+	sort=search api database,
+	description={\gls{Modulo} \gls{Drupal} che fornisce un \gls{Backend}, semplice da utilizzare ed economico rispetto a sistemi più avanzati come \gls{Solr} e \gls{ElasticSearch}, per \gls{Search API}; prevede un database per consentire l'indicizzazione dei dati}
+}
+
+\newglossaryentry{Backend}
+{
+	name=\glslink{Backend}{Backend},
+	text=backend,
+	sort=backend,
+	description={Insieme delle applicazioni e dei programmi con cui l'utente non interagisce direttamente ma che sono essenziali al funzionamento del sistema}
+}
+
+\newglossaryentry{Search API Pages}
+{
+	name=\glslink{Search API Pages}{Search API Pages},
+	text=search API pages,
+	sort=search api pages,
+	description={\gls{Modulo} \gls{Drupal} che consente la creazione di semplici pagine di ricerca basate su \gls{Search API}}
+}
+
+\newglossaryentry{Server}
+{
+	name=\glslink{Server}{Server},
+	text=server,
+	sort=server,
+	description={Si occupa dell'effettiva indicizzazione dei dati. Può avere un numero arbitrario di \gls{Index} ad esso associati}
+}
+
+\newglossaryentry{Index}
+{
+	name=\glslink{Index}{Index},
+	text=index,
+	sort=index,
+	description={Oggetto di configurazione per l'indicizzazione dei dati che determina come e quali dati sono indicizzati a seconda delle configurazioni che assume. Tiene inoltre traccia di quali elementi devono ancora essere indicizzati (o re-indicizzati a seguito di aggiornamenti). Devono risiedere su un server per poter essere utilizzati.
+		E' possibile ad esempio avere un "Node index" per indicizzare gli elementi di tipo nodo. L'indice è indipendente dalla meccanica interna utilizzata dai motori di ricerca}
+}
+
+\newglossaryentry{Cron}
+{
+	name=\glslink{Cron}{Cron},
+	text=cron,
+	sort=cron,
+	description={\gls{Demone} che ad intervalli regolari esegue automaticamente un insieme di comandi, chiamati "cron jobs"}
+}
+
+\newglossaryentry{Demone}
+{
+	name=\glslink{Demone}{Demone},
+	text=demone,
+	sort=demone,
+	description={In informatica, nei sistemi Unix, e più in generale nei sistemi operativi multitasking, un demone (daemon in inglese) è un programma eseguito in background, cioè senza che sia sotto il controllo diretto dell'utente, tipicamente fornendo un servizio all'utente}
+}
+
+\newglossaryentry{HTMLg}
+{
+	name=\glslink{html}{HTML},
+	text=HTML,
+	sort=html,
+	description={Linguaggio usato per la definizione di pagine Web; la sua sintassi è stabilita dal \gls{W3CGg}. HTML5 è l’ultima versione stabile}
+}
+
+\newglossaryentry{W3CGg}
+{
+	name=\glslink{w3cg}{W3CG},
+	text=W3CG,
+	sort=w3cg,
+	description={Organizzazione non governativa internazionale che ha come scopo quello di sviluppare tutte le potenzialità del World Wide Web. Al fine di riuscire nel proprio intento, la principale attività svolta dal W3C consiste nello stabilire standard tecnici che riguardino sia i linguaggi di markup che i protocolli di comunicazione}
+}
+
+\newglossaryentry{Java}
+{
+	name=\glslink{Java}{Java},
+	text=Java,
+	sort=java,
+	description={Linguaggio di programmazione ad alto livello, orientato agli oggetti e a tipizzazione statica, specificatamente progettato per essere il più possibile indipendente dalla piattaforma di esecuzione}
+}
+
+\newglossaryentry{Servlet}
+{
+	name=\glslink{Servlet}{Servlet},
+	text=Servlet,
+	sort=servlet,
+	description={Oggetti scritti in linguaggio \gls{Java} che operano all'interno di un server web oppure un server per applicazioni, permettendo la creazione di web applications}
+}
+
+\newglossaryentry{Java Lucene}
+{
+	name=\glslink{Java Lucene}{Java Lucene},
+	text=Java Lucene,
+	sort=java lucene,
+	description={\gls{APIg} gratuita ed \gls{open source} per il reperimento di informazioni, inizialmente implementata in \gls{Java}}
+}
+
+\newglossaryentry{APIg}
+{
+	name=\glslink{api}{API},
+	text=API,
+	sort=api,
+	description={Insieme di procedure utilizzabili per interfacciarsi con un programma o un sistema informatico in modo standard. Spesso si intendono le librerie software disponibili in un certo linguaggio di programmazione.
+	}
+}
+
+\newglossaryentry{REST}
+{
+	name=\glslink{REST}{REST},
+	text=REST,
+	sort=rest,
+	description={Stile architetturale che offre la possibilità di manipolare rappresentazioni testuali di risorse Web utilizzando un set predefinito di operazioni}
+}
+
+\newglossaryentry{JSONg}
+{
+	name=\glslink{json}{JSON},
+	text=JSON,
+	sort=json,
+	description={Formato adatto all'interscambio di dati fra applicazioni client-server}
+}
+
+\newglossaryentry{HTTPg}
+{
+	name=\glslink{http}{HTTP},
+	text=HTTP,
+	sort=http,
+	description={Formato adatto all'interscambio di dati fra applicazioni client-server}
+}
+
+\newglossaryentry{TF-IDFg}
+{
+	name=\glslink{tf-idf}{TF-IDF},
+	text=TF-IDF,
+	sort=tf-idf,
+	description={Funzione utilizzata per misurare l'importanza di un termine rispetto ad un documento o ad una collezione di documenti. Tale funzione aumenta proporzionalmente al numero di volte che il termine è contenuto nel documento, ma cresce in maniera inversamente proporzionale alla frequenza del termine nella collezione. L'idea alla base di questo comportamento è di dare più importanza ai termini che compaiono nel documento, ma che in generale sono poco frequenti}
+}
+
+\newglossaryentry{Tokenizer}
+{
+	name=\glslink{Tokenizer}{Tokenizer},
+	plural=Tokenizers,
+	text=Tokenizer,
+	sort=Tokenizer,
+	description={Trasforma uno stream di testo in un elenco di \gls{Token}}
+}
+
+\newglossaryentry{Token}
+{
+	name=\glslink{Token}{Token},
+	plural=tokens,
+	text=Token,
+	sort=Token,
+	description={Blocco di testo categorizzato}
+}
+
+\newglossaryentry{Stem Words}
+{
+	name=\glslink{Stem Words}{Stem Words},
+	text=stem words,
+	sort=stem words,
+	description={Rappresentano la radice di un termine; da queste possono derivare le desinenza del termine radice, ovvero l'elemento finale variabile di una parola}
+}
+
+\newglossaryentry{XMLg}
+{
+	name=\glslink{xml}{XML},
+	text=XML,
+	sort=xml,
+	description={Metalinguaggio che consente la rappresentazione di documenti e dati strutturati su supporto digitale}
+}
+
+\newglossaryentry{Parser}
+{
+	name=\glslink{Parser}{Parser},
+	text=Parser,
+	sort=parser,
+	description={Programma che analizza un file, verificandone la correttezza sintattica rispetto a una data grammatica}
+}
+
+\newglossaryentry{Snowball}
+{
+	name=\glslink{Snowball}{Snowball},
+	text=Snowball,
+	sort=snowball,
+	description={Package per la generazione di \gls{Stem Words}}
+}
+
+\newglossaryentry{Phrase Query}
+{
+	name=\glslink{Phrase Query}{Phrase Query},
+	text=Phrase Query,
+	sort=phrase query,
+	description={Una phrase è un insieme di parole, contornate dal simbolo ", come ad esempio "questa stringa rappresenta una phrase"}
+}
+
+\newglossaryentry{Wildcard}
+{
+	name=\glslink{Wildcard}{Wildcard},
+	text=Wildcard,
+	sort=wildcard,
+	description={La ricerca wildcard non rappresenta una ricerca esatta di una stringa; si basa su un match tra i caratteri specificati nel termine ricercato, sostituendo i caratteri speciali inseriti (?, *, ecc...): questi rappresentano uno o più caratteri non contenuti nel termine ricercato}
+}
+
+\newglossaryentry{Fuzzy Search}
+{
+	name=\glslink{Fuzzy Search}{Fuzzy Search},
+	text=Fuzzy Search,
+	sort=fuzzy search,
+	description={Ricerca simile alla ricerca standard, con l'unica eccezione che tutti i valori di campo vengono messi a confronto e ordinati in base al grado di somiglianza con la stringa di ricerca}
+}
+
+\newglossaryentry{Proximity Search}
+{
+	name=\glslink{Proximity Search}{Proximity Search},
+	text=Proximity Search,
+	sort=proximity search,
+	description={Ricerca i termini che distano tra loro al più della distanza che viene specificata}
+}
+
+\newglossaryentry{RESTful}
+{
+	name=\glslink{RESTful}{RESTful},
+	text=RESTful,
+	sort=restful,
+	description={Le applicazioni basate su \gls{REST}, si definiscono RESTful e utilizzano le richieste \gls{HTTPg} per inviare i dati (creazione e/o aggiornamento), effettuare query, modificare e cancellare i dati. In definitiva, \gls{REST} utilizza \gls{HTTPg} per tutte e quattro le operazioni CRUD (Create / Read / Update / Delete)}
+}
+
+\newglossaryentry{Kibana}
+{
+	name=\glslink{Kibana}{Kibana},
+	text=Kibana,
+	sort=kibana,
+	description={Plugin \gls{open source} che consente di visualizzare i dati per la tecnologia \gls{ElasticSearch}. Permette inoltre agli utenti di creare vari tipi di grafici basati su grandi volumi di dati. Assieme a \gls{ElasticSearch} e \gls{Kibana} compone quello che viene definito "Elastic Stack" (ELK stack)}
+}
+
+\newglossaryentry{Logstash}
+{
+	name=\glslink{Logstash}{Logstash},
+	text=Logstash,
+	sort=logstash,
+	description={Strumento per la gestione di eventi e log, fornendo un valido sistema per la raccolta, gestione e memorizzazione di attività legate alla ricerca. Assieme a \gls{ElasticSearch} e \gls{Kibana} compone quello che viene definito "Elastic Stack" (ELK stack)}
+}
+
+\newglossaryentry{Search Files}
+{
+	name=\glslink{Search Files}{Search Files},
+	text=Search Files,
+	sort=search files,
+	description={\gls{Modulo} \gls{Drupal} che consente di effettuare ricerche sui files. Sfrutta il modulo Search appartenente al core di \gls{Drupal}}
+}
+
+\newglossaryentry{pdftotext}
+{
+	name=\glslink{pdftotext}{pdftotext},
+	text=pdftotext,
+	sort=pdftotext,
+	description={Programma a linea di comando, 	\gls{open source}, che permette di estrarre dati testuali da un file PDF}
+}
+
+\newglossaryentry{Search API Attachments}
+{
+	name=\glslink{Search API Attachments}{Search API Attachments},
+	text=Search API Attachments,
+	sort=search aPI attachments,
+	description={\gls{Modulo} \gls{Drupal} che consente di effettuare ricerche sui files. Sfrutta il modulo \gls{Search API}}
+}
+
+\newglossaryentry{Apache Tika}
+{
+	name=\glslink{Apache Tika}{Apache Tika},
+	text=Apache Tika,
+	sort=apache tika,
+	description={\gls{Framework} scritto in \gls{Java} che consente l'analisi e la conversione dei dati testuali contenuti diversi tipi di file}
+}
+
+\newglossaryentry{python pdf2text}
+{
+	name=\glslink{python pdf2text}{python pdf2text},
+	text=python pdf2text,
+	sort=python pdf2text,
+	description={Applicativo locale scritto nel linguaggio di programmazione python che consente di effettuare ricerche su files di tipo PDF}
 }
