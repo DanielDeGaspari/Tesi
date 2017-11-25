@@ -8,9 +8,21 @@
 \label{cap:resoconto_dello_stage}
 
 	\section{Individuazione dei motori di ricerca}
-	In questa sezione motiverò la selezione di Solr e ElasticSearch come motori di ricerca da studiare.
-	%Sono inoltre già presenti moduli che permettono l'integrazione di questi motori con l'ambiente Drupal
+	Ad oggi, sono disponibili in rete un gran numero di motori di ricerca, sia proprietari, sia \gls{open source}. Questi, mettono a disposizione funzionalità di ricerca più o meno avanzate e, a seconda di vari fattori come possono essere, ad esempio, la tipologia e la quantità di dati che vogliamo indicizzare, rendendoli ricercabili agli utenti, possiamo optare per l'uno piuttosto che per l'altro. \\
+	La scelta del motore di ricerca più adatto alle specifiche esigenze, non è questione affatto banale; molte volte esistono varie soluzioni in grado di modellare bene il problema che dobbiamo affrontare, simili tra loro, che differiscono però per alcuni aspetti chiave. \\
+	Focalizzando l'attenzione sulle esigenze dettate dai siti informativi Camerali, possiamo già applicare un primo filtro sui motori di ricerca da utilizzare: motori di ricerca proprietari \textit{vs} motori di ricerca \gls{open source}. \\
+	Un motore di ricerca proprietario rappresenta indubbiamente un onere per l'azienda e, oltre a ciò, quest'ultima non ha il pieno controllo sulla destinazione finale dei dati; queste questioni non si hanno invece in un sistema \gls{open source}, nel quale il codice sorgente è liberamente modificabile e analizzabile, avendo dunque il pieno controllo sull'intero sistema. \\
+	Nella figura 3.1 è presente una classifica dei motori di ricerca, aggiornata a Novembre 2017, calcolata su parametri che rappresentano la popolarità del sito (maggiori informazioni sui punteggi assegnati sono disponili al seguente indirizzo: \url{https://db-engines.com/en/ranking_definition}). Da questa tabella, notiamo come in testa alla classifica siano presenti tre motori di ricerca che hanno un ampio margine di distacco, in termini di punteggio ad essi attribuito, rispetto alle tecnologie che li precedono. Di questi, solamente i primi due (\gls{Solr} e \gls{ElasticSearch}) sono alternative \gls{open source}. \\
+	Oltre a ciò, per entrambi i motori di ricerca appena citati, sono disponibili \glspl{Modulo} \gls{Drupal} che rendono possibile la semplice integrazione tra i motori di ricerca e il \gls{CMSg} di interesse. \\
+	Le motivazioni appena descritte, hanno così portato alla selezione di \gls{Solr} e \gls{ElasticSearch} come motori di ricerca da studiare nell'ambito dello stage.
 
+	\begin{figure}[htbp]
+		\begin{center}
+			\includegraphics[width=13cm]{tabella_SE}
+			\captionof{figure}{\cite{site:confronto_SE}}
+		\end{center}
+	\end{figure}
+	
 	\section{Pianificazione}
 	In questa sezione presenterò come è avvenuta la pianificazione dello stage.
 	%Ambiente di sviluppo in locale
