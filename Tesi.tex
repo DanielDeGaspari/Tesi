@@ -37,11 +37,17 @@
 \usepackage{nameref}											% visualizza i nomi dei riferimenti
 \usepackage[font=small]{quoting}								% citazioni
 \usepackage[italian]{varioref}									% riferimenti completi alla pagina
-\usepackage[dvpsnames]{xcolor}									% colori
+\usepackage[table,xcdraw,dvpsnames]{xcolor}						% colori
 
 \usepackage[toc, acronym]{glossaries}							% glossario
 
 \usepackage{url}												% Bibliografia
+
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\usepackage{array}												% per wrappare il testo nelle colonne
+\newcolumntype{C}[1]{>{\arraybackslash}p{#1}}
+
+\usepackage{longtable}
 
 \usepackage[backend=bibtex,style=verbose-ibid,hyperref,backref]{biblatex}
 % eccellente pacchetto per la bibliografia; 
