@@ -60,6 +60,7 @@
 		
 		\newpage
 		\subsection{Possibile evoluzione}
+		\label{sub:possibile_evoluzione}
 		Come ho illustrato nella sezione precedente, le funzionalità di ricerca attuali sono molto limitate, ben lontane dal fornire all'utente un'esperienza di navigazione incentrato sulla ricerca, con strumenti limitati nel numero e nella qualità delle funzionalità offerte. \\
 		Come possiamo dunque migliorare la ricerca nei siti informativi Camerali?
 		Per perseguire questo obiettivo ambizioso, pensiamo alle funzionalità di ricerca con cui gli utenti sono soliti interagire. \\		
@@ -207,21 +208,57 @@
 				\captionof{figure}{Motore di ricerca Solr}
 			\end{center}
 		\end{figure}
-		
-		Qui verrà introdotto Solr, spiegando cos'è e come funziona.
-		%Ranking
+	
+		\gls{Solr} rappresenta una piattaforma di ricerca \gls{open source}, scritta in \gls{Java}, che viene eseguita come server di ricerca full text indipendente, all'interno di un contenitore \gls{Servlet}. Utilizza \gls{Java Lucene} come libreria per la ricerca e l'indicizzazione full text e mette a disposizione chiamate \gls{REST} come ad esempio, comunicando in vari formati, tra i quali \gls{JSONg} e \gls{XMLg}, rendendo semplice e versatile la comunicazione. \\ Nonostante sia scritto in \gls{Java}, non è necessaria una conoscenza di tale linguaggio per utilizzare questa tecnologia; è inoltre possibile estendere la libreria di ricerca: in questo caso la conoscenza di \gls{Java} risulterebbe, ovviamente, fondamentale. \\
+		Questa tecnologia mette a disposizione un gran numero di funzionalità che aiutano l'utilizzatore ad eseguire ricerche semplici e intuitive ma potenti al tempo stesso. E' importante notare che questa tecnologia espone \gls{APIg} che offrono servizi \gls{HTTPg} di tipo \gls{REST}, senza fornire componenti grafici per la ricerca.
 		
 		\subsection{Principali funzionalità di ricerca}
-		Qui verranno presentate le principali funzionalità di ricerca offerte dal motore di ricerca Solr, di possibile interesse per i siti camerali.
+		
+			\subsubsection{Modalità di operare}
+			Dopo uno studio iniziale riguardante l'architettura ad alto livello della tecnologia, ho proceduto alla creazione e alla configurazione di una nuova istanza \gls{Solr}; la versione che ho utilizzato è la 5.5.4. Successivamente, ne ho studiato le funzionalità di ricerca più significative offerte dalla tecnologia in esame, prestando attenzione alla sua integrazione con l'ambiente \gls{Drupal}.
 			
+			\subsubsection{Architettura ad alto livello}
+			Per lo studio dell'architettura ad alto livello di questa tecnologia, mi sono servito di letteratura e materiale trovato in rete. Con le fonti trovate, ho individuato le seguenti componenti che vanno a comporre l'architettura di massima di \gls{Solr}, presentate di seguito.
+			
+			\begin{itemize}
+				\label{solr:request_handler}
+				\item {\textbf{Request Handler:} Le richieste che arrivano al sistema \gls{Solr} vengono processate da questa componente e possono essere di interrogazione o di aggiornamento dell'\gls{Index}; }
+				
+				\item{\textbf{Search Components:} Rappresenta l'insieme delle funzionalità di ricerca (faceting, highlighting, more like this, ecc...) offerte da Apache Solr. Le singole componenti di ricerca (search component) si registrano come gestori di ricerca (search handlers). E' inoltre possibile registrare più componenti in un singolo search handler;}
+				
+				\label{solr:query_parser}
+				\item{\textbf{Query Parser:} Il \gls{Parser} di Apache Solr analizza le query passate a \gls{Solr}, verificandone la correttezza sintattica. Successivamente, traduce le interrogazioni in un formato comprensibile a \gls{Java Lucene};}
+				
+				\item{\textbf{Response Writer:} Componente che si occupa della generazione dell'output a seguito delle interrogazioni eseguite. Vengono supportati vari formati, tra cui \gls{XMLg}, \gls{JSONg}, ecc...;}
+				
+				\label{solr:analyzer_tokenizer}
+				\item{\textbf{Analyzer/tokenizer:} Apache Solr analizza il contenuto e lo divide in \glspl{Token} che verranno successivamente inviati a \gls{Java Lucene}. Un Analyzer esamina il testo dei campi del contenuto e genera un flusso di token. Successivamente, questo flusso di token viene suddiviso in singoli token da un \gls{Tokenizer};}
+				
+				\item{\textbf{Update Request Processor:} Ogni richiesta di aggiornamento inviata ad Apache Solr passa attraverso una serie di processi, responsabili delle modifiche (eliminazioni, aggiunte di campi, ecc...), che insieme vengono definiti update request processor.}
+				
+			\end{itemize}
+			
+			\begin{figure}[p]
+				\makebox[\linewidth]{
+					\includegraphics[width=1.3\linewidth]{solr_architettura}
+				}
+				\caption{Diagramma delle componenti principali di Solr}
+			\end{figure}
+			
+			\subsubsection{Considerazioni sulla ricerca Solr}
+			Per ogni tipologia di funzionalità di interesse per i siti informativi Camerali, ho proceduto alla configurazione delle componenti in modo tale da creare esempi funzionanti che supportassero la funzionalità in esame. In particolare, ho potuto constatare che tutte le funzionalità di possibile interesse per \nomeAzienda, presentate in \hyperref[sub:possibile_evoluzione]{3.3.2}, vengono offerte e supportate da \gls{Solr}. \\
+			Lo step successivo, consisteva nel verificare se tali funzionalità continuavano ad essere supportate integrando questo motore di ricerca con l'ambiente \gls{Drupal}, in quanto quest'ultimo avrebbe potuto agire da collo di bottiglia.
+
 		\subsection{Integrazione con Drupal}
-		Qui verranno discusse le funzionalità di ricerca derivanti dall'integrazione tra Solr e Drupal.
-			
+		Le versioni di \gls{Drupal} (7.56) e di \gls{Solr} (5.5.4) utilizzate permettono l'integrazione di queste due tecnologie in due differenti modalità, presentate di seguito.
+		
 			\subsubsection{Apache Solr}
-			Qui verranno discusse le funzionalità di ricerca derivanti dall'integrazione tra Solr e Drupal mediante il modulo Apache Solr Search.
+			Apache Solr permette di integrare il motore di ricerca \gls{Solr} con l'ambiente \gls{Drupal} mediante utilizzo di un apposito \gls{Modulo}, denominato "Apache Solr". Questo modulo mette in comunicazione il modulo di ricerca "Search" offerto dal core di \gls{Drupal} con il motore di ricerca. \\
+			Dopo aver creato e configurato un'apposita istanza \gls{Drupal} che utilizzasse il suddetto modulo, ho potuto constatare che, pur utilizzando un potente motore di ricerca, non vengono supportate alcune delle funzionalità di possibile interesse per i siti Camerali, data l'assenza di \glspl{Modulo} necessari all'integrazione della ricerca di base e avanzata con \gls{Solr}. In particolare, un'istanza \gls{Drupal} che utilizzi il modulo "Apache Solr" non permette l'utilizzo dei filtri multipli nè la creazione di più indici, utili per gestire tipologie di ricerca che differiscano per tipo di documento/entità ricercata, all'interno di un sito.
 			
 			\subsubsection{Search API Solr}
-			Qui verranno discusse le funzionalità di ricerca derivanti dall'integrazione tra Solr e Drupal mediante il modulo Search API Solr Search.
+			Search API Solr permette di integrare il motore di ricerca \gls{Solr} con l'ambiente \gls{Drupal} utilizzando il modulo "Search API Solr", che funge da connettore tra le due tecnologie, mettendo in comunicazione il modulo di ricerca \gls{Search API} con il motore di ricerca. \\
+			Dopo aver creato e configurato un'apposita istanza \gls{Drupal} che utilizzasse il suddetto modulo, ho avuto modo di vedere che tutte le funzionalità di possibile interesse per i siti Camerali vengono ben supportate da questa tipologia di integrazione, risultando essere lo strumento di maggior interesse tra tutti quelli presentati fino ad ora.
 	
 	\section{Ricerca con ElasticSearch}
 	
