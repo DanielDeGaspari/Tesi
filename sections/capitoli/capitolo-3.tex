@@ -205,7 +205,7 @@
 		\begin{figure}[htbp]
 			\begin{center}
 				\includegraphics[width=7cm]{logo_solr}
-				\captionof{figure}{Motore di ricerca Solr}
+				\captionof{figure}{Logo ricerca Solr}
 			\end{center}
 		\end{figure}
 	
@@ -218,6 +218,7 @@
 			Dopo uno studio iniziale riguardante l'architettura ad alto livello della tecnologia, ho proceduto alla creazione e alla configurazione di una nuova istanza \gls{Solr}; la versione che ho utilizzato è la 5.5.4. Successivamente, ne ho studiato le funzionalità di ricerca più significative offerte dalla tecnologia in esame, prestando attenzione alla sua integrazione con l'ambiente \gls{Drupal}.
 			
 			\subsubsection{Architettura ad alto livello}
+			\label{solr:architettura_ad_alto_livello}
 			Per lo studio dell'architettura ad alto livello di questa tecnologia, mi sono servito di letteratura e materiale trovato in rete. Con le fonti trovate, ho individuato le seguenti componenti che vanno a comporre l'architettura di massima di \gls{Solr}, presentate di seguito.
 			
 			\begin{itemize}
@@ -263,18 +264,55 @@
 	\section{Ricerca con ElasticSearch}
 	
 		\subsection{Introduzione a ElasticSearch}
-		Qui verrà introdotto ElasticSearch, spiegando cos'è e come funziona.
-		%Ranking
+		
+		\begin{figure}[htbp]
+			\begin{center}
+				\includegraphics[width=7cm]{logo_elasticSearch}
+				\captionof{figure}{Logo ricerca ElasticSearch}
+			\end{center}
+		\end{figure}
+		
+		\gls{ElasticSearch} è una piattaforma di ricerca \gls{open source}, con capacità di ricerca full text. E' un server di ricerca basato su \gls{Java Lucene} e supporta architetture distribuite. Tutte le funzionalità sono nativamente esposte tramite interfaccia \gls{RESTful}; le informazioni sono invece gestite come documenti \gls{JSONg}. \\
+		Questa tecnologia è divenuta molto popolare nell'ambito Big Data, negli ambienti enterprise e nel settore del cloud computing, date le funzionalità di ricerca, analisi e visualizzazione dei contenuti nei documenti \gls{JSONg}, con interrogazioni che avvengono quasi in tempo reale. \\
+		Assieme a \gls{Kibana} e \gls{Logstash}, produce una soluzione integrata, in grado di gestire grandi quantità di log in una forma centralizzata, facilmente ricercabile e che usi un'interfaccia grafica intuitiva; questi tre software vanno a produrre quello che viene definito "Elastic Stack" (ELK stack).
 
 		\subsection{Principali funzionalità di ricerca}
-		Qui verranno presentate le principali funzionalità di ricerca offerte dal motore di ricerca ElasticSearch, di possibile interesse per i siti camerali.
+		
+			\subsubsection{Modalità di operare}
+			Dopo uno studio iniziale riguardante l'architettura ad alto livello della tecnologia, ho proceduto alla creazione e alla configurazione di una nuova istanza \gls{ElasticSearch}; la versione che ho utilizzato è la 5.6.4. Per semplificare l'utilizzo di questo strumento, ho utilizzato \gls{Cerebro}, un tool che consente di avere una visione grafica degli indici di ricerca creati in \gls{ElasticSearch} e che fornisce uno strumento per effettuare, in modo semplice, chiamate \gls{REST}, in modo tale da poter comunicare con il server di ricerca.
+			Successivamente, ne ho studiato le funzionalità di ricerca più significative offerte dalla tecnologia in esame, prestando attenzione alla sua integrazione con l'ambiente \gls{Drupal}.
+			
+			\subsubsection{Architettura ad alto livello}
+			L'architettura di \gls{ElasticSearch} pone le sue fondamenta nel linguaggio \gls{Java} e consente l'esecuzione di ricerche full text all'interno di un contenitore \gls{Servlet}. Così come accade per \gls{Solr}, \gls{ElasticSearch} utilizza \gls{Java Lucene} come libreria per la ricerca. Qui le comunicazioni passano da un'interfaccia di tipo \gls{RESTful} e le informazioni vengono gestite come documenti \gls{JSONg}.\\
+			Una delle caratteristiche importanti di \gls{ElasticSearch} riguardanti la gestione degli event log, è quella di essere prima di uno schema, rendendo in tal modo possibile, a seguito dell'inserimento di un qualsiasi documento in formato \gls{JSONg}, l'indicizzazione di tutti i suoi campi, consentendo così di poter essere utilizzati per eseguire query di ricerca. \\
+			Nella letteratura e nel materiale ricercato in rete, non ho trovato una spiegazione chiara ed esaustiva sull'architettura ad alto livello di questa tecnologia. Assieme al tutor, partendo dall'architettura studiata per \gls{Solr}, abbiamo dunque cercato di disegnare un'architettura di massima di questo motore di ricerca.Le componenti che abbiamo individuato sono le stesse di quelle presenti per \gls{Solr}, \hyperref[solr:architettura_ad_alto_livello]{presentate in precedenza in questo capitolo}.
+
+			\begin{figure}[p]
+				\makebox[\linewidth]{
+					\includegraphics[width=1.3\linewidth]{elasticsearch_architettura}
+				}
+				\caption{Diagramma delle componenti principali di ElasticSearch}
+			\end{figure}
+			
+			\subsubsection{Considerazioni sulla ricerca ElasticSearch}
+			Così come ho agito con lo studio di \gls{Solr}, anche per \gls{ElasticSearch}, per ogni tipologia di funzionalità di interesse per i siti informativi Camerali, ho proceduto alla configurazione delle componenti in modo tale da creare esempi funzionanti che supportassero la funzionalità in esame. Anche in questo caso, ho potuto constatare che tutte le funzionalità di possibile interesse per \nomeAzienda, presentate in \hyperref[sub:possibile_evoluzione]{3.3.2}, sono ben supportate da \gls{ElasticSearch}. \\
+			Lo step successivo, consisteva nel verificare se tali funzionalità continuavano ad essere supportate integrando questo motore di ricerca con l'ambiente \gls{Drupal}, in quanto quest'ultimo avrebbe potuto agire da collo di bottiglia.
 		
 		\subsection{Integrazione con Drupal}
-		Qui verranno discusse le funzionalità di ricerca derivanti dall'integrazione tra ElasticSearch e Drupal.
-		%Accenno alla versione Drupal8?
+		Le versioni di \gls{Drupal} (7.56) e di \gls{ElasticSearch} (5.6.4) utilizzate permettono l'integrazione di queste due tecnologie in una sola modalità.
 		
 			\subsubsection{Search API ElasticSearch}
-			Qui verranno discusse le funzionalità di ricerca derivanti dall'integrazione tra ElasticSearch e Drupal mediante il modulo Search API ElasticSearch.
-			
+			Search API Solr permette di integrare il motore di ricerca \gls{Solr} con l'ambiente \gls{Drupal} utilizzando il modulo "Search API ElasticSearch", che funge da connettore tra le due tecnologie, mettendo in comunicazione il modulo di ricerca \gls{Search API} con il server di ricerca in esame. \\
+			Dopo aver creato e configurato un'apposita istanza \gls{Drupal} che utilizzasse il suddetto modulo, ho avuto modo di vedere che tutte le funzionalità di possibile interesse per i siti Camerali, risultando essere dunque una valida alternativa a quanto offerto dalla ricerca con Search API Solr.
+
 	\section{Considerazioni finali sui motori di ricerca esaminati}
-	Questa sezione conterrà un confronto tra le principali funzionalità, possibilmente di interesse per l'azienda, offerte dalle tecnologie esaminate e quale di queste potrebbe essere la più adatta ai siti camerali.
+	Dallo studio sulle funzionalità supportate dalle tecnologie di ricerca esaminate, ho prodotto una tabella riassuntiva, riportata di seguito, che illustri le funzionalità rese disponibili dalle varie tecnologie. E' bene sottolineare che tecnologie diverse possono supportare più o meno bene le singole funzionalità; un esempio per comprendere meglio questo concetto emerge dalla funzionalità di ricerca sui files: il numero di tipologie di file supportati è molto maggiore negli ambienti che utilizzano i motori di ricerca \gls{Solr} e \gls{ElasticSearch}, a differenza invece della ricerca nativa, in grado di supportare un insieme molto limitato di estensioni, tra i quali è però presente il formato PDF, che risulta essere quello di maggior interesse per l'azienda. \\
+	Dal confronto emerge che le uniche due tecnologie in grado di supportare tutte le funzionalità individuate sono la ricerca con Search API Solr e la ricerca con Search API ElasticSearch. \\
+	Tra tutte queste, ho cercato di individuare quale delle due fosse più adatta per i siti we informativi Camerali realizzati da \nomeAzienda. Considerando la soluzione attuale presente in alcuni degli attuali siti in produzione, ovvero la ricerca nativa "core", la soluzione più adatta che ho individuato consiste nell'evolvere la ricerca attuale alla ricerca nativa con Search API, in grado di supportare tutte le funzionalità di possibile interesse, eccetto lo stemming (per la ricerca delle \gls{Stem Words}). In un secondo momento, sarà possibile utilizzare un connettore per completare la lista delle funzionalità offerte, migliorando inoltre quelle presenti in Search API, mediante l'utilizzo di un motore di ricerca \gls{Solr}, che presenta il vantaggio di essere già conosciuto e utilizzato in azienda, dell'alternativa \gls{ElasticSearch}, o eventualmente di qualche altra nuova tecnologia che prenda piede nel mondo dei motori di ricerca.
+	
+	\begin{figure}[p]
+		\makebox[\linewidth]{
+			\includegraphics[width=1.3\linewidth]{confronto_finale}
+		}
+		\caption{Principali funzionalità di possibile interesse per i siti informativi Camerali e relativo supporto da parte dei motori di ricerca esaminati}
+	\end{figure}
