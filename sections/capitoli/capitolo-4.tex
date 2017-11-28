@@ -10,13 +10,91 @@
 \section{Bilancio degli obiettivi}
 
 	\subsection{Aziendali}
-	Questa sezione descriverà gli obiettivi aziendali soddisfatti, derivanti dallo stage.
-	% Dal capitolo 2
 	
+	Riprendendo gli obiettivi posti inizialmente dall'azienda riguardanti lo stage, presentati nella \hyperref[sub:obiettivi_posti_azienda]{sezione 2.2.2 : Obiettivi posti dall'azienda}, posso affermare di aver soddisfatto quanto mi era stato richiesto. \\
+	Le \gls{Milestone} previste sono state raggiunte nei tempi prestabiliti, con un'eccezione: la presentazione dell'elaborato al team di lavoro, prevista per la fine dell'ottava settimana, è stata anticipata alla conclusione della settima settimana, in modo tale da evitare l'incorrere di eventuali imprevisti. \\
+	Nella prima settimana di lavoro, in aggiunta a quanto previsto e su indicazione del tutor aziendale, ho studiato e configurato un \gls{Modulo} aggiuntivo dedicato alla ricerca, che può essere considerato il passo intermedio tra quanto offerto nativamente dall'ambiente di sviluppo e i motori di ricerca più avanzati. Lo studio di tale modulo non ha comunque influito, a livello di tempistiche, su quanto pianificato per le settimane successive alla prima, ritrovandomi dunque allineato con quanto pianificato. \\
+	Gli obiettivi aziendali, come già presentato nella \hyperref[subsub:priorita_degli_obiettivi_aziendali]{sezione 2.2.2, in concomitanza della priorità degli obiettivi aziendali}, sono stati suddivisi in obiettivi minimi e massimi. \\
+	Di seguito, riporterò una tabella nel quale viene indicato lo stato di superamento degli obiettivi dello stage e una specifica più dettagliata riguardo l'esito dei singoli obiettivi dello stage.
+
+	\begin{longtable}{| C{2cm} | C{7cm} | C{2cm} |}
+		\toprule
+		\textbf{ID} & \textbf{Descrizione} & \textbf{Esito} \\ \hline
+		\endhead	% Permette di ripetere l'intestazione nelle nuove pagine
+		\midrule
+		
+		%%%%%	INIZIO BLOCCO FUNZIONALITA'	%%%%%
+		
+		\multicolumn{3}{|c|}{\cellcolor[HTML]{EFEFEF}\textbf{Obiettivi obbligatori (min) }} \\ \hline
+		
+		%%%%%	INIZIO BLOCCO TEST	%%%%%
+		
+		min01 &  Analisi dei punti di forza e debolezza dei prodotti \gls{Solr} ed \gls{ElasticSearch} & Soddisfatto \\ \hline
+		
+		%%%%%	FINE BLOCCO TEST	%%%%%
+		
+		%%%%%	INIZIO BLOCCO TEST	%%%%%
+		
+		min02 &  Realizzazione del prototipo in \gls{Drupal} con le funzioni minime di ricerca & Soddisfatto \\ \hline
+		
+		%%%%%	FINE BLOCCO TEST	%%%%%
+		
+		%%%%%	FINE BLOCCO FUNZIONALITA'	%%%%%
+		
+		
+		
+		%%%%%	INIZIO BLOCCO FUNZIONALITA'	%%%%%
+		
+		\multicolumn{3}{|c|}{\cellcolor[HTML]{EFEFEF}\textbf{Obiettivi desiderabili e opzionali (max) }} \\ \hline
+		
+		%%%%%	INIZIO BLOCCO TEST	%%%%%
+		
+		max01 & Comparazione dei due motori di ricerca esaminati con altri di riferimento nel mercato & Soddisfatto \\ \hline
+		
+		%%%%%	FINE BLOCCO TEST	%%%%%
+		
+		%%%%%	INIZIO BLOCCO TEST	%%%%%
+		
+		max02 &  Indicazioni su possibili interventi sui siti web istituzionali per quanto riguarda la user experience di navigazione, a seguito delle potenzialità espresse dai motori di ricerca & Soddisfatto \\ \hline
+		
+		%%%%%	FINE BLOCCO TEST	%%%%%
+		
+		%%%%%	FINE BLOCCO FUNZIONALITA'	%%%%%
+		
+		\bottomrule
+		\caption{Superamento degli obiettivi dello stage}
+	\end{longtable}
+
+	\begin{itemize}
+		
+		\item {\textbf{[min01] Analisi dei punti di forza e debolezza dei prodotti \gls{Solr} ed \gls{ElasticSearch}}: Durante lo stage, ho avuto modo di esplorare le funzionalità, di possibile interesse per l'azienda, offerte da queste due tecnologie. Il confronto tra questi due motori di ricerca non si limita alle funzionalità che ho analizzato. Le differenze di maggior rilievo emergono infatti sotto l'aspetto sistemistico. Personalmente, ho avuto modo di esplorare una piccola parte della visione sistemistica fornita dalle due tecnologie, concentrandomi invece sulle richieste dell'azienda, ovvero sullo studio delle funzionalità di possibile interesse per i siti informativi Camerali;}
+		
+		\item {\textbf{[min02] Realizzazione del prototipo in \gls{Drupal} con le funzioni minime di ricerca}: Per ogni tecnologia di ricerca analizzata, ho creato un'istanza \gls{Drupal} dedicata, attraverso la quale ho verificato l'eventuale presenza delle funzionalità di possibile interesse per i siti informativi Camerali. Ho avuto inoltre modo di creare un prototipo che utilizzasse i dati e le configurazioni dell'attuale sito in produzione della Camera di Commercio di Verona, al quale ho cambiato la tecnologia di ricerca, cercando di migliorarne le funzionalità offerte;}
+		
+		\item {\textbf{[max01] Comparazione dei due motori di ricerca esaminati con altri di riferimento nel mercato}: Come spiegato nella \hyperref[sec:individuazione_dei_motori_di_ricerca]{Sezione 3.1: Individuzione dei motori di ricerca}, sono stati presi in considerazione ulteriori tecnologie di ricerca oltre a quelle esaminate;}
+		
+		\item {\textbf{[max02] Indicazioni su possibili interventi sui siti web istituzionali per quanto riguarda la user experience di navigazione, a seguito delle potenzialità espresse dai motori di ricerca}: Come evidenziato nella \hyperref[sub:possibile_evoluzione]{Sezione 3.3.2 : Possibile evoluzione}, ho proposto l'aggiunta di alcune funzionalità, prendendo come esempio l'attuale sito in produzione informativo camerale di Verona (\cite{site:vr}), creando inoltre un prototipo che utilizzasse le funzionalità proposte.}
+	\end{itemize}
+
+	A seguito del mio stage, l'azienda è stata inoltre in grado di ottenere alcuni risultati immediati:
+	\begin{itemize}
+		\item {La ricerca dei siti informativi delle Camere di Commercio di Bologna, Palermo-Enna e Sicilia Orientale ha visto un'evoluzione nella tecnologia utilizzata;}
+		\item {E' stata migliorata la configurazione della ricerca del sito informativo della Camera di Commercio di Torino.}
+	\end{itemize}
+
 	\subsection{Personali}
-	Questa sezione descriverà gli obiettivi personali soddisfatti, derivanti dallo stage.
-	% Dal capitolo 2
+	Lo stage svolto mi ha introdotto al mondo lavorativo, in un'importante azienda che opera nel settore informatico. Nei due mesi trascorsi in \nomeAzienda, mi sono potuto confrontare con personale qualificato, in possesso di un'ottica diversa da quella a cui sono abituato a confrontarmi da studente universitario quale sono stato fino ad ora. Ho potuto applicare alcune delle conoscenze apprese durante il mio percorso di studi, evolvendo dalla mera conoscenza teorica ad una conoscenza pratica, certamente molto più richieste e di interesse nell'attuale mercato del lavoro.	
 	
+	\begin{itemize}
+		
+		\item {Motivazioni professionali: Lo stage in \nomeAzienda mi ha permesso di entrare in contatto con personale esperto e qualificato nel mondo dell'informatica; in tal modo, ho potuto affinare le mie capacità di problem solving ed esplorare tecnologie attuali, correlate ad un tema particolarmente interessante. Tutto ciò ha permesso di arricchire le mie conoscenze e competenze, che si traduce in un arricchimento del curriculum. Inoltre, ho potuto espandere la mia rete di conoscenze, con persone che lavorano da anni nel mondo dell'informatica.}
+		
+		\item {Motivazioni economiche: L'azienda ha rispettato gli accordi, offrendomi un rimborso spese e buoni pasto.}
+		
+		\item {Motivazioni personali: Ho avuto modo di valutare se il percorso formativo da me scelto fosse quello corretto e se quanto fatto durante lo stage fosse realmente ciò a cui mi voglio dedicare nella vita.}
+		
+	\end{itemize}
+
 \section{Conoscenze acquisite}
 Questa sezione descriverà le conoscenze acquisite derivanti dallo stage.
 
